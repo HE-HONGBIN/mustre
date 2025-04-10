@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}项目列表{% endblock %}
+
+{% block content %}
+<h1>项目列表</h1>
+<ul class="list-group">
+    {% for project in projects %}
+        <li class="list-group-item">{{ project.title }} - {{ project.organization }}</li>
+    {% endfor %}
+</ul>
+
+<section class="py-5 text-center container">
+    <div class="row py-lg-5">
+        <div class="col-lg-6 col-md-8 mx-auto">
+            <h1 class="fw-light">TRE Project</h1>
+            <p class="lead text-muted">Some description about the TRE Project. Some description about the TRE Project. Some description about the TRE Project.</p>
+            <p>
+                <a href="{{ url_for('project.create') }}" class="btn btn-primary my-2">Create</a>
+            </p>
+        </div>
+    </div>
+</section>
+{% endblock %}

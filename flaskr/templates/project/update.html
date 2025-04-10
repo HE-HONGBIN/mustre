@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block title %}项目列表{% endblock %}
+
+{% block content %}
+    <h1>项目列表</h1>
+    <ul class="list-group">
+        {% for project in projects %}
+            <li class="list-group-item">{{ project.title }} - {{ project.organization }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
+

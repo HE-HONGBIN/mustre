@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}数据协议{% endblock %}
+
+{% block content %}
+    <h1>数据协议</h1>
+    <ul class="list-group">
+        {% for agreement in agreements %}
+            <li class="list-group-item">
+                关联项目 ID: {{ agreement.project_id }} -
+                <a href="{{ agreement.file_path }}" target="_blank">查看协议</a>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

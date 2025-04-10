@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block title %}TRE - Project{% endblock %}
+
+{% block content %}
+<nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item" aria-current="page"><a href="{{ url_for('project.create') }}">Project Register</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Legal Aggrements</li>
+    <li class="breadcrumb-item" aria-current="page">Metadata Submission</li>
+    <li class="breadcrumb-item" aria-current="page">Data Upload</li>
+    <li class="breadcrumb-item" aria-current="page">Done</li>
+  </ol>
+</nav>
+
+<p>Upload legal aggrement document and wait for project manager's approval.</p>
+<!--<form action="post">-->
+<!--    <button type="submit" class="btn btn-primary">Upload</button>-->
+<!--</form>-->
+
+<!--<form action="/upload" method="post" enctype="multipart/form-data">-->
+<!--  <input type="file" name="file">-->
+<!--  <input type="submit" value="上传">-->
+<!--</form>-->
+
+
+<html>
+    <body>
+        <form method="post" enctype="multipart/form-data">
+            <input type="file" name="file">
+            <input type="submit">
+        </form>
+    </body>
+</html>
+
+{% endblock %}

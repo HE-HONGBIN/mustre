@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block title %}TRE - Project{% endblock %}
+
+{% block content %}
+<nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item active" aria-current="page">Project Register</li>
+        <li class="breadcrumb-item" aria-current="page">Legal Aggrements</li>
+        <li class="breadcrumb-item" aria-current="page">Metadata Submission</li>
+        <li class="breadcrumb-item" aria-current="page">Data Upload</li>
+        <li class="breadcrumb-item" aria-current="page">Done</li>
+    </ol>
+</nav>
+
+<form method="post" action="{{ url_for('project.aggrement') }}">
+    <div class="mb-3">
+        <label for="inputTitle" class="form-label">Title</label>
+        <input type="text" class="form-control" id="inputTitle" aria-describedby="titleHelp">
+        <div id="titleHelp" class="form-text">Please input the project title.</div>
+    </div>
+    <div class="mb-3">
+        <label for="inputDescription" class="form-label">Description</label>
+        <input type="text" class="form-control" id="inputDescription" aria-describedby="titleDescription">
+        <div id="titleDescription" class="form-text">Please input the project description.</div>
+    </div>
+    <div class="mb-3">
+        <label for="inputOrganition" class="form-label">Organition</label>
+        <input type="text" class="form-control" id="inputOrganition" aria-describedby="titleOrganition">
+        <div id="titleOrganition" class="form-text">Please input your organition.</div>
+    </div>
+    <div class="mb-3">
+        <label for="inputDeadline" class="form-label">Deadline</label>
+        <input type="date" class="form-control" id="inputDeadline" aria-describedby="titleDeadline">
+        <div id="titleDeadline" class="form-text">Please input deadline for the project.</div>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Create</button>
+</form>
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}元数据列表{% endblock %}
+
+{% block content %}
+    <h1>元数据列表</h1>
+    <ul class="list-group">
+        {% for meta in metadata %}
+            <li class="list-group-item">关联项目 ID: {{ meta.project_id }} - {{ meta.description }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
